@@ -9,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 	<!-- custom css -->
 	<link rel="stylesheet" href="./styles/styles.css">
+	<link rel="stylesheet" href="./function.js">
 </head>
 <body class="font-raleway">
 	<header>
@@ -53,7 +54,7 @@
 			  <div class="max-w-md mt-20">
 				<h1 class="mb-5 text-4xl font-bold">End-to-End Travel with <nav class="text-[#1DD100]">P Paribahan</nav></h1>
 				<p class="mb-10">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-				<button class="btn text-black bg-[#1DD100]">Buy Tickets</button>
+				<button id="buy-ticket" class="btn text-black bg-[#1DD100]">Buy Tickets</button>
 			  </div>
 			</div>
 		  </div>
@@ -77,7 +78,7 @@
 							<img src="./images/cupon-devider.png" alt="">
 					</div>
 					<div class="w-2/5 text-center grid place-content-start md:place-content-center  gap-2">
-						<h1 class="text-3xl  font-bold">NEW15</h1>
+						<h1 id="coupon-1" class="text-3xl  font-bold">NEW15</h1>
 						<p>Coupon Code</p>
 				 </div>
 			</div>
@@ -91,7 +92,7 @@
 							<img src="./images/cupon-devider.png" alt="">
 					</div>
 					<div class="w-2/5 text-center grid place-content-start md:place-content-center  gap-2">
-						<h1 class="text-3xl  font-bold">Couple 20</h1>
+						<h1 id="coupon-2" class="text-3xl  font-bold">Couple 20</h1>
 						<p>Coupon Code</p>
 				 </div>
 			</div>
@@ -139,10 +140,12 @@
 			<p>Route</p>
 			<p class="font-bold">Dhaka - Sylhet</p>
 			</div>
+			<div class="divider"></div>
 			<div class="flex justify-between">
 			<p>Departure Time</p>
 			<p class="font-bold">9:00 PM</p>
 			</div>
+			<div class="divider"></div>
 			<div class="flex justify-between">
 				<button class="btn btn-active">Boarding Point - Laxmipur</button>
 			    <button class="btn btn-active">Dropping Point - Bogura</button>
@@ -155,7 +158,7 @@
 	</div>
 	<div class="w-3/12 text-center grid place-content-start md:place-content-center">
    <img class="p-10" src="./images/fare.png" alt="">
-   <h1 class="font-extrabold text-3xl">550 Taka</h1>
+   <h1 id="oer-seat" class="font-extrabold text-3xl">550 Taka</h1>
    <p>Per Seat</p>
 	</div>
 </div>
@@ -165,13 +168,187 @@
 </section>
 <!-- ticket-1 section end -->
 <!-- ticket-2 section start   -->
-<section class="min-h-full bg-[#F7F8F8]">
-<!-- left side -->
 
-</section>
+<section class="min-h-full bg-[#F7F8F8] flex">
+	<!-- left side -->
+	<div class="w-3/5 p-10">
+	<h4 class="font-bold">Select Your Seat</h4>
+	<div class=" flex justify-between">
+		<button class="btn"> <span><img src="./images/seat-gray.png" alt=""></span>Available</button>
+		<button class="btn text-[#1DD100]"> <span><img src="./images/seat-green-filled.png" alt=""></span>Selected</button>
+	</div>
+	<div>
+		
+		<div class="flex justify-end mt-10">
+			<button class="btn"><span><img src="./images/wheel.svg" alt=""></span></button>
+		</div>
+		<div class="grid-cols-4 flex justify-between">
+			<div class="">
+				<button id="A1" class="btn">A1</button>
+				<button id="A2" class="btn">A2</button>
+			</div>
+			<div>
+				<button id="A3" class="btn">A3</button>
+				<button id="A4" class="btn">A4</button>
+			</div>
+		</div>
+		<div class="grid-cols-4 flex justify-between">
+			<div class="">
+				<button id="B1" class="btn">B1</button>
+				<button id="B2" class="btn">B2</button>
+			</div>
+			<div>
+				<button id="B3" class="btn">B3</button>
+				<button id="B4" class="btn">B4</button>
+			</div>
+		</div>
+		<div class="grid-cols-4 flex justify-between">
+			<div class="">
+				<button id="C1" class="btn">C1</button>
+				<button id="C2" class="btn">C2</button>
+			</div>
+			<div>
+				<button id="C3" class="btn">C3</button>
+				<button id="C4" class="btn">C4</button>
+			</div>
+		</div>
+		<div class="grid-cols-4 flex justify-between">
+			<div class="">
+				<button id="D1" class="btn">D1</button>
+				<button id="D2" class="btn">A2</button>
+			</div>
+			<div>
+				<button id="D3" class="btn">D3</button>
+				<button id="D4" class="btn">D4</button>
+			</div>
+		</div>
+		<div class="grid-cols-4 flex justify-between">
+			<div class="">
+				<button id="E1" class="btn">E1</button>
+				<button id="E2" class="btn">E2</button>
+			</div>
+			<div>
+				<button id="E3" class="btn">E3</button>
+				<button id="E4" class="btn">E4</button>
+			</div>
+		</div>
+		<div class="grid-cols-4 flex justify-between">
+			<div class="">
+				<button id="F1" class="btn">F1</button>
+				<button id="F2" class="btn">F2</button>
+			</div>
+			<div>
+				<button id="F3" class="btn">F3</button>
+				<button id="F4" class="btn">F4</button>
+			</div>
+		</div>
+		<div class="grid-cols-4 flex justify-between">
+			<div class="">
+				<button id="G1" class="btn">G1</button>
+				<button id="G2" class="btn">G2</button>
+			</div>
+			<div>
+				<button id="G3" class="btn">G3</button>
+				<button id="G4" class="btn">G4</button>
+			</div>
+		</div>
+		<div class="grid-cols-4 flex justify-between">
+			<div class="">
+				<button id="H1" class="btn">H1</button>
+				<button id="H2" class="btn">H2</button>
+			</div>
+			<div>
+				<button id="H3" class="btn">H3</button>
+				<button id="H4" class="btn">H4</button>
+			</div>
+		</div>
+		<div class="grid-cols-4 flex justify-between">
+			<div class="">
+				<button id="I1" class="btn">I1</button>
+				<button id="I2" class="btn">I2</button>
+			</div>
+			<div>
+				<button id="I3" class="btn">I3</button>
+				<button id="I4" class="btn">I4</button>
+			</div>
+		</div>
+		<div class="grid-cols-4 flex justify-between">
+			<div class="">
+				<button id="J1" class="btn">J1</button>
+				<button id="J2" class="btn">J2</button>
+			</div>
+			<div>
+				<button id="J3" class="btn">J3</button>
+				<button id="J4" class="btn">J4</button>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+
+		
+	</div>
+	
+	
+	
+	</div>
+	<!-- middle divider -->
+	<div class="w-auto">
+		<img src="./images/cupon-devider.png" alt="">
+	</div>
+	<!-- right side -->
+	<div class="w-2/5 p-10">
+		<h4 class="font-bold">Select Your Seat</h4>
+		<div class="bg-[#F7F8F8] rounded-lg">
+        <div class="font-bold flex justify-between">
+			<p>seat <span>0</span></p>
+            <p>class</p>
+            <p>price</p>
+		</div>
+		<div class="divider"></div>
+		</div>
+		<div class="font-bold flex justify-between">
+			<p>Total-price</p>
+			<p id="total-price">BDT 00</p>
+		</div>
+		<label class="input flex items-center gap-2">
+			<input type="text" class="grow" placeholder="have coupon" />
+			<button id="apply" class="btn bg-[#1DD100] text-white">Apply</button>
+		  </label>
+		  <div class="font-bold flex justify-between">
+			<p>Grand Total</p>
+			<p id="grand-total">BDT 00</p>
+		</div>
+		<p>Passenger Name*</p>
+		<input type="text" placeholder="Enter your name" class="input input-bordered w-full max-w-xs" />
+		<p>Phone Number*</p>
+		<input type="text" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs" />
+		<p>Email ID</p>
+		<input type="text" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs" />
+		<button class="btn btn-wide bg-[#1DD100] text-white">Next</button>
+	</div>
+	</section>
+
+
+
 	</main>
-	<footer>
-
-	</footer>
+	<footer class="footer p-10 bg-neutral text-neutral-content">
+		<aside>
+		 
+		  <h1 class="font-bold text-xl">P-Ticket</h1>
+		  <p>P-Ticket is a digital platform to make your <br>daily commuting better.</p>
+		</aside> 
+		<nav>
+		  <h6 class="footer-title">Download our app</h6> 
+		  <div class="grid grid-flow-col gap-4">
+			<button class="btn bg-black">
+				<img src="./images/playstore.png" alt="" srcset="">
+				<h2 class="text-white">Google play</h2>
+			</button>
+			
+		  </div>
+		</nav>
+	  </footer>
 </body>
 </html>
